@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.cardview.widget.CardView
 import com.uda_kotlin.task4.adapter.NewsAdapter
 import com.uda_kotlin.task4.model.Article
@@ -34,7 +35,24 @@ class MainActivity : AppCompatActivity() {
         val cvCat5 = cv_cat_5
 
 
+
+
+
         if (isConnect() == true) {
+
+            sv_news.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    val adpFilter = (rv_news_list.adapter as NewsAdapter).filter
+                    adpFilter.filter(newText.toString())
+                    Log.d("dap","$adpFilter")
+                    return false
+                }
+
+            })
 
             operateCategorySelection(1)
 

@@ -22,11 +22,18 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/sv_bg" />
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="Categories"
             android:textColor="@android:color/black"
             android:textSize="25sp"

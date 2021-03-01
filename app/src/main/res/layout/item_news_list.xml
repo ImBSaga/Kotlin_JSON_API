@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:padding="10dp"
-                android:text="Nama Penulis"
+                android:text="Nama Title"
                 android:textColor="@color/black" />
 
 
